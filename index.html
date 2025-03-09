@@ -3,10 +3,10 @@
 <head>
   <base target="_top">
   <link rel="stylesheet" href="style.css">
-  <!-- Use an older jQuery version for compatibility -->
+  <!-- Use a stable, older version of jQuery -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <!-- Use the raw GitHub URL for turn.js -->
-  <script src="https://raw.githubusercontent.com/blasten/Turn.js-4th-release/refs/heads/master/lib/turn.js"></script>
+  <!-- Load Turn.js locally from your repository -->
+  <script src="turn.js"></script>
 </head>
 <body>
   <h1>Harmony Records Store Dashboard</h1>
@@ -34,7 +34,8 @@
       ];
       
       $('#flipbook').html(pages.join(''));
-
+      
+      // Initialize Turn.js
       $('#flipbook').turn({
         width: 800,
         height: 500,
