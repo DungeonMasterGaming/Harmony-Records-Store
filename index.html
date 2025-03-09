@@ -3,8 +3,10 @@
 <head>
   <base target="_top">
   <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <!-- Use an older jQuery version for compatibility -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- Use the raw GitHub URL for turn.js -->
+  <script src="https://raw.githubusercontent.com/blasten/Turn.js-4th-release/refs/heads/master/lib/turn.js"></script>
 </head>
 <body>
   <h1>Harmony Records Store Dashboard</h1>
@@ -23,13 +25,16 @@
   <script>
     function openBook(bookName) {
       $('#bookViewer').fadeIn(300);
+      
       const pages = [
         `<div class="page"><h2>${bookName}</h2><p>Content of page 1</p></div>`,
         `<div class="page"><h2>${bookName}</h2><p>Content of page 2</p></div>`,
         `<div class="page"><h2>${bookName}</h2><p>Content of page 3</p></div>`,
         `<div class="page"><h2>${bookName}</h2><p>Content of page 4</p></div>`
       ];
+      
       $('#flipbook').html(pages.join(''));
+
       $('#flipbook').turn({
         width: 800,
         height: 500,
