@@ -58,9 +58,9 @@ body {
 }
 
 .page {
+  position: absolute; /* Let Turn.js position the pages */
   background-color: white;
   padding: 20px;
   width: 400px;
   height: 460px;
-  /* Remove float: left to let Turn.js handle positioning */
 }
